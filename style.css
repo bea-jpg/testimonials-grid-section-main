@@ -10,12 +10,14 @@
     --weight-semibold: 600;
 }
 
-body {
-    box-sizing: border-box;
-    margin: 0;
+* {
     padding: 0;
-
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
     font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: var(--light-greyish-blue);
 }
 
 /* formatting cards */
@@ -26,18 +28,187 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .card {
     width: 92%;
-    background-color: aqua;
+    padding: 20px;
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    position: relative;
+
+    z-index: -2;
 }
 
 .user {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 .user img{
     height: 30px;
+
+    border-radius: 100%;
+}
+
+.name {
+    font-weight: var(--weight-semibold);
+}
+
+.impression {
+    font-weight: var(--weight-semibold);
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* first card */
+
+.sign {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: -1;
+}
+
+#card1 {
+    background-color: var(--moderate-violet);
+    color: hsla(0, 0%, 81%, 0.5);
+}
+
+#card1 .user img {
+    border: solid hsla(0, 0%, 81%, 0.5);
+}
+
+#card1 .name, #card1 .impression{
+    color: var(--light-grey);
+}
+
+/* second card */
+
+#card2 {
+    background-color: var(--very-dark-greyish-blue);
+    color: hsla(0, 0%, 81%, 0.5);
+}
+
+#card2 .name, #card2 .impression{
+    color: var(--light-grey);
+}
+
+/* third card */
+
+#card3 {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 20px 24px;
+    color: hsla(217, 19%, 35%, 0.5);
+}
+
+#card3 .name, #card3 .impression{
+    color: var(--very-dark-greyish-blue);
+}
+
+/* fourth card */
+
+#card4 {
+    background-color: var(--very-dark-blackish-blue);
+    color: hsla(0, 0%, 81%, 0.5);
+}
+
+#card4 .user img {
+    border: solid var(--moderate-violet);
+}
+
+#card4 .name, #card4 .impression{
+    color: var(--light-grey);
+}
+
+/* fifth card */
+
+#card5 {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 20px 24px;
+    color: hsla(217, 19%, 35%, 0.5);
+}
+
+#card5 .name, #card5 .impression{
+    color: var(--very-dark-greyish-blue);
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+}
+
+a {
+    color: var(--moderate-violet);
+}
+
+/* desktop */
+
+@media (min-width: 700px){
+    .cards {
+        display: grid;
+        /* grid-template-columns: 220px 220px 220px 220px;
+        grid-template-rows: 250px 250px; */
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        margin: 20px
+    }
+
+    .card{
+        display: inline-grid;
+        width: 100%;
+        height: 100%;
+    }
+
+    #card1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #card2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #card3 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #card4 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #card5 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .cards {
+        margin: 50px 100px;
+    }
 }
