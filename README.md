@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/bea-jpg/testimonials-grid-section-main)
-- Live Site URL: [Add live site URL here](https://bea-jpg.github.io/testimonials-grid-section-main/)
+- Solution URL: [https://github.com/bea-jpg/testimonials-grid-section-main](https://github.com/bea-jpg/testimonials-grid-section-main)
+- Live Site URL: [https://bea-jpg.github.io/testimonials-grid-section-main/](https://bea-jpg.github.io/testimonials-grid-section-main/)
 
 ## My process
 
